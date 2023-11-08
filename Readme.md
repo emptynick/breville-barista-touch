@@ -61,6 +61,40 @@ The same applies to the other port number 8
 There is a sensor on the PCB which was connected to a hose leasing to venturi valve.  
 It is marked `FN9520` and googling this leads me to the [Amsys SM9520A](https://www.amsys-sensor.com/products/ceramic-and-silicon-pressure-measuring-cells/sm95g-low-pressure-sensor-die/) a low differential pressure sensor die.
 
+## Power PCB
+
+The power PCB is located at the back of the machine behind the power-supply.
+
+![Power PCB](assets/power_pcb.jpg)
+
+It contains the following cables:
+
+1. Third valve (right)
+2. Single valve (bottom)
+3. Pump
+4. Bean hopper switch
+5. Neutral
+6. Grinder motor
+7. Grinder motor
+8. ??? Going into heatshrink. Probably phase
+9. (The blue one below) Second valve (center)
+10. First valve (left)
+11. Thermojet
+12. ??? Going into the cooled part on the left
+13. Airpump
+14. Watertank reed switch
+15. Flowwheel
+16. Thermojet NTC
+17. Coming from PSU. Probably low voltage supply
+18. Steamwand rised/lowered switch
+19. Portafilter switch
+20. 40 pin connector to main PCB
+21. 6 pin milkpitcher switch and NTC
+
+### Other parts on this PCB
+
+- 
+
 ## Now what?
 
 We do have two options now:
