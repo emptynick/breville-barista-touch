@@ -51,31 +51,22 @@ I confirmed the pinout **only** by checking that the three ground-pins on 3, 29 
 
 On the PCB there is an UART port which is not soldered.  
 Attaching cables and connecting it to my logic analyzer gave me - nothing. Bummer.  
-The only thing visible is some random gibberish data on the RX line: 
-
-**INSERT IMAGE**
-
+The only thing visible is some random gibberish data on the RX line.  
 Those data are also visible while the machine is **not** connected to mains - possibly because of the backup battery.
 
 The same applies to the other port number 8
 
 ### Pressure sensor
 
-There is a sensor on the PCB which was connected to a hose leasing to ...  
+There is a sensor on the PCB which was connected to a hose leasing to venturi valve.  
 It is marked `FN9520` and googling this leads me to the [Amsys SM9520A](https://www.amsys-sensor.com/products/ceramic-and-silicon-pressure-measuring-cells/sm95g-low-pressure-sensor-die/) a low differential pressure sensor die.
 
 ## Now what?
 
 We do have two options now:
 
-1. "Crack" the firmware and flash a custom one
-2. Remove the PCB and add a different.
-
-### Customizing the firmware
-
-The hardware we have is pretty powerful.  
-We have a 32bit ARM Cortex M4 with up to 180Mhz, 256Mb RAM and 256Mb flash.  
-You ever thought you could say that about your coffee machine?  
+1. Remove the PCB and add a different.
+2. "Crack" the firmware and flash a custom one 
 
 ### Replacing the PCB
 
@@ -83,3 +74,10 @@ At first I thought this is the way to go.
 Unfortunately the display is not compatible with Raspberry Pis or other SBCs.  
 Adafruit does have a [board](https://www.adafruit.com/product/1590) which should be compatible but it costs 40$ and I'm not sure if it is worth it.  
 At that cost you could simply swap the whole display/pcb unit with an [ESP32 with display](https://aliexpress.com/item/1005006213165842.html)
+
+
+### Customizing the firmware
+
+The hardware we have is pretty powerful.  
+We have a 32bit ARM Cortex M4 with up to 180Mhz, 256Mb RAM and 256Mb flash.  
+You ever thought you could say that about your coffee machine? 
