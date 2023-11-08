@@ -3,6 +3,20 @@
 This repository contains my progress reverse engineering the Breville/Sage Barista Touch espresso machine.  
 The target of this is to either find out how to control the machine or to find out how to replace the control board with a custom one.
 
+## Why?
+
+Because I replaced my machine by a proper dual boiler.  
+I bought this machine defective for as less as 50 Euro and thought I won't resell it and tinker around with it instead.  
+Also, this machine has a few faults which could be overcome with a different firmware or controller.  
+Some of those are:
+- Better temperature controlling
+- Better temperature options (Degrees instead of low, medium and high)
+- More drink customization options
+- WiFi/Bluetooth connection (to control the machine from a phone, connect with a scale etc)
+- Better grind timings (Currently only seconds possible)
+
+**And most importantly: because its fun**
+
 ## Control board
 
 Starting with the main control board.  
