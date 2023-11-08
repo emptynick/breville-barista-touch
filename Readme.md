@@ -95,7 +95,7 @@ It contains the following cables:
 
 On the left side there is a heatsink with 3 cables going in (red, purple and yellow).  
 Under the heatsink there is a simple [Q6015L6](https://www.mouser.com/ProductDetail/Littelfuse/Q6015L6?qs=DBUMZ2Yty93GeYTH4lKOzw%3D%3D) 15 Amp TRIAC.  
-This controls the thermojet .
+This controls the thermojet. Applying power to the yellow cable fires the heater.
 
 ## Now what?
 
