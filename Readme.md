@@ -9,11 +9,11 @@ Starting with the main control board.
 This should give us a good overview of the hardware running this machine.  
 The control board is behind the display so you need to remove the front panel to access it.
 
-### Main PCB parts
+### Control PCB parts
 
 ![PCB front](assets/pcb_front.jpg)
 
-The main PCB contains the following (major) parts on the front:
+The control PCB contains the following (major) parts on the front:
 1. [STM32F429BIT6](https://www.st.com/en/microcontrollers-microprocessors/stm32f429bi.html) microcontroller
 2. [MX29GL256FHT2I-90Q](https://www.digikey.com/en/products/detail/macronix/MX29GL256FHT2I-90Q/2744732) 256Mb NOR Flash
 3. [AS4C8M32S-7TCN](https://www.alliancememory.com/datasheets/AS4C8M32S/) 256Mb SDRAM
@@ -24,7 +24,7 @@ The main PCB contains the following (major) parts on the front:
 8. 4 pin port without markings (see below)
 9. 4 pin UART port (see below)
 10. 3 pin connector for the grind-setting encoder
-11. 40 pin connector going to the power board
+11. 26 pin connector going to the power board
 12. 20 pin debug port. Probably used by the manufacturer to flash the firmware
 13. Power button PCB with two white LEDs
 14. Soldered CR2450 battery
@@ -58,7 +58,7 @@ The same applies to the other port number 8
 
 ### Pressure sensor
 
-There is a sensor on the PCB which was connected to a hose leasing to venturi valve.  
+There is a sensor on the PCB which was connected to a hose leading to the venturi valve.  
 It is marked `FN9520` and googling this leads me to the [Amsys SM9520A](https://www.amsys-sensor.com/products/ceramic-and-silicon-pressure-measuring-cells/sm95g-low-pressure-sensor-die/) a low differential pressure sensor die.
 
 ## Power PCB
@@ -88,7 +88,7 @@ It contains the following cables:
 17. Coming from PSU. Probably low voltage supply
 18. Steamwand rised/lowered switch
 19. Portafilter switch
-20. 40 pin connector to main PCB
+20. 26 pin connector to control PCB
 21. 6 pin milkpitcher switch and NTC
 
 ## The heatsink
@@ -96,6 +96,69 @@ It contains the following cables:
 On the left side there is a heatsink with 3 cables going in (red, purple and yellow).  
 Under the heatsink there is a simple [Q6015L6](https://www.mouser.com/ProductDetail/Littelfuse/Q6015L6?qs=DBUMZ2Yty93GeYTH4lKOzw%3D%3D) 15 Amp TRIAC.  
 This controls the thermojet. Applying power to the yellow cable fires the heater.
+
+## The 26 pin connector
+
+The 26 pin connector is the main interface between the control PCB and the power PCB.  
+At this point I figured the following pinout:  
+
+![26 pin connector pinout](assets/comm_port.jpg)
+
+1. ???
+2. ???
+3. ???
+4. ???
+5. ???
+6. ???
+7. ???
+8. ???
+9. ???
+10. ???
+11. ???
+12. ???
+13. ???
+14. GND
+15. ???
+16. ???
+17. ???
+18. ???
+19. ???
+20. ???
+21. ???
+22. ???
+23. ???
+24. ???
+25. ???
+26. ???
+
+## The debug port
+
+The 20 pin header which is accessible by removing the top panel and opening the rubber lid.  
+This port is very interesting and should allow us to dump and reflash the firmware.  
+At this point I figured the following pinout:
+
+![Debug port pinout](assets/debug_port.jpg)
+
+1. ???
+2. ???
+3. ???
+4. ???
+5. ???
+6. ???
+7. ???
+8. ???
+9. ???
+10. ???
+11. GND
+12. GND
+13. GND
+14. GND
+15. GND
+16. GND
+17. GND
+18. GND
+19. GND
+20. ???
 
 ## Now what?
 
