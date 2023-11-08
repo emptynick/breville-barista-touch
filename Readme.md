@@ -105,7 +105,7 @@ At this point I figured the following pinout:
 ![26 pin connector pinout](assets/comm_port.jpg)
 
 1. ???
-2. ???
+2. Connected to pin 59 of STM32 (VDD)
 3. ???
 4. ???
 5. ???
@@ -129,7 +129,7 @@ At this point I figured the following pinout:
 23. ???
 24. ???
 25. ???
-26. ???
+26. ??? (red cable)
 
 ## The debug port
 
