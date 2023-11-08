@@ -80,7 +80,7 @@ It contains the following cables:
 9. (The blue one below) Second valve (center)
 10. First valve (left)
 11. Thermojet
-12. ??? Going into the cooled part on the left
+12. Goes to the TRIAC under the heatsink (see next paragraph)
 13. Airpump
 14. Watertank reed switch
 15. Flowwheel
@@ -94,6 +94,12 @@ It contains the following cables:
 ### Other parts on this PCB
 
 - 
+
+## The heatsink
+
+On the left side there is a heatsink with 3 cables going in (red, purple and yellow).  
+Under the heatsink there is a simple [Q6015L6](https://www.mouser.com/ProductDetail/Littelfuse/Q6015L6?qs=DBUMZ2Yty93GeYTH4lKOzw%3D%3D) 15 Amp TRIAC.  
+This either controls the thermojet or supplies the whole system with power after the MCU wakes up.
 
 ## Now what?
 
