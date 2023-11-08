@@ -70,6 +70,8 @@ Those data are also visible while the machine is **not** connected to mains - po
 
 The same applies to the other port number 8
 
+**This needs more investigation.** we should be able to get something out of it
+
 ### Pressure sensor
 
 There is a sensor on the PCB which was connected to a hose leading to the venturi valve.  
@@ -193,4 +195,7 @@ At that cost you could simply swap the whole display/pcb unit with an [ESP32 wit
 
 The hardware we have is pretty powerful.  
 We have a 32bit ARM Cortex M4 with up to 180Mhz, 256Mb RAM and 256Mb flash.  
-You ever thought you could say that about your coffee machine? 
+You ever thought you could say that about your coffee machine?  
+
+This requires all pins connected to the STM32 to be traced down and documented to be able to write a whole new firmware for the STM32.  
+This might take some time as the PCB is a multi layer PCB.
