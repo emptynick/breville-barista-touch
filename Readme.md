@@ -27,7 +27,7 @@ The control PCB contains the following (major) parts on the front:
 11. 26 pin connector going to the power board
 12. 20 pin debug port. Probably used by the manufacturer to flash the firmware
 13. Power button PCB with two white LEDs
-14. Soldered CR2450 battery
+14. Soldered CR2450 battery. Connected to VBat of the STM32
 
 And on the back:
 ![PCB back](assets/pcb_back.jpg)
@@ -141,14 +141,14 @@ At this point I figured the following pinout:
 
 1. ???
 2. ???
-3. ???
-4. ???
+3. Connected to pin 58 of STM32 (generic IO)
+4. Connected to pin 36 of STM32 (generic IO)
 5. ???
-6. ???
-7. ???
+6. Connected to pin 3 of STM32 (TRACED1)
+7. Connected to pin 199 of STM32 (generic IO)
 8. ???
 9. ???
-10. ???
+10. Connected to pin 2 of STM32 (TRACED0)
 11. GND
 12. GND
 13. GND
@@ -158,7 +158,7 @@ At this point I figured the following pinout:
 17. GND
 18. GND
 19. GND
-20. ???
+20. Connected to pin 59 of STM32 (VDD)
 
 ## Now what?
 
