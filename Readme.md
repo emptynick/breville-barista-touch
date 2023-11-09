@@ -28,26 +28,31 @@ The control board is behind the display so you need to remove the front panel to
 ![PCB front](assets/pcb_front.jpg)
 
 The control PCB contains the following (major) parts on the front:
-1. [STM32F429BIT6](https://www.st.com/en/microcontrollers-microprocessors/stm32f429bi.html) microcontroller
-2. [MX29GL256FHT2I-90Q](https://www.digikey.com/en/products/detail/macronix/MX29GL256FHT2I-90Q/2744732) 256Mb NOR Flash
-3. [AS4C8M32S-7TCN](https://www.alliancememory.com/datasheets/AS4C8M32S/) 256Mb SDRAM
-4. TDK piezo buzzer. Something like [this](https://product.tdk.com/en/search/sw_piezo/sw_piezo/piezo-buzzer/info?part_no=PS1720P02)
-5. Standart 8.0Mhz Oscillator
-6. 40 pin FPC connector for the display
-7. Mysterious 4 pin pressure sensor (see below)
-8. 4 pin port without markings (see below)
-9. 4 pin UART port (see below)
-10. 3 pin connector for the grind-setting encoder
-11. 26 pin connector going to the power board
-12. 20 pin debug port. Probably used by the manufacturer to flash the firmware
-13. Power button PCB with two white LEDs
-14. Soldered CR2450 battery. Connected to VBat of the STM32
+
+| **Number** | **Part**                                                                                                                         |
+|------------|----------------------------------------------------------------------------------------------------------------------------------|
+| 1          | [STM32F429BIT6](https://www.st.com/en/microcontrollers-microprocessors/stm32f429bi.html) microcontroller                         |
+| 2          | [MX29GL256FHT2I-90Q](https://www.digikey.com/en/products/detail/macronix/MX29GL256FHT2I-90Q/2744732) 256Mb NOR Flash             |
+| 3          | [AS4C8M32S-7TCN](https://www.alliancememory.com/datasheets/AS4C8M32S/) 256Mb SDRAM                                               |
+| 4          | TDK piezo buzzer. Something like [this](https://product.tdk.com/en/search/sw_piezo/sw_piezo/piezo-buzzer/info?part_no=PS1720P02) |
+| 5          | Standart 8.0Mhz Oscillator                                                                                                       |
+| 6          | 40 pin FPC connector for the display                                                                                             |
+| 7          | Mysterious 4 pin pressure sensor (see below)                                                                                     |
+| 8          | 4 pin port without markings (see below)                                                                                          |
+| 9          | 4 pin UART port (see below)                                                                                                      |
+| 10         | 3 pin connector for the grind-setting encoder                                                                                    |
+| 11         | 26 pin connector going to the power board                                                                                        |
+| 12         | 20 pin debug port. Probably used by the manufacturer to flash the firmware                                                       |
+| 13         | Power button PCB with two white LEDs                                                                                             |
+| 14         | Soldered CR2450 battery. Connected to VBat of the STM32                                                                          |
 
 And on the back:
 ![PCB back](assets/pcb_back.jpg)
 
-1. [ST M93C66-W](https://www.st.com/en/memories/m93c66-w.html) Serial access EEPROM
-2. [MAX4460](https://www.analog.com/en/products/max4460.html) Amplifier
+| **Number** | **Part**                                                                                                                         |
+|------------|----------------------------------------------------------------------------------------------------------------------------------|
+| 1          | [ST M93C66-W](https://www.st.com/en/memories/m93c66-w.html) Serial access EEPROM                                                 |
+| 2          | [MAX4460](https://www.analog.com/en/products/max4460.html) Amplifier                                                             |
 
 ### Display
 
