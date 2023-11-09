@@ -51,7 +51,7 @@ And on the back:
 
 ### Display
 
-The display is a 4.3" 480x272 TFT LCD with capacitive touch screen.  
+The display is a 4.3" 480x272 TFT LCD with capacitive touch screen controlled by a [Sitronix ST16331](https://www.sitronix.com.tw/en/products/projected-c-touch-controller-ic/).  
 The display is connected to the main PCB via a 40-pin FPC connector.  
 It is labeled as `CTM480272T16-D` which can not be found on the internet.  
 The closest I could find is the [Adafruit 4.3" 40-pin TFT Display](https://www.adafruit.com/product/1591).  
@@ -75,7 +75,7 @@ The same applies to the other port number 8
 ### Pressure sensor
 
 There is a sensor on the PCB which was connected to a hose leading to the venturi valve.  
-It is marked `FN9520` and googling this leads me to the [Amsys SM9520A](https://www.amsys-sensor.com/products/ceramic-and-silicon-pressure-measuring-cells/sm95g-low-pressure-sensor-die/) a low differential pressure sensor die.
+It is labeled `F9520` and googling this leads me to the [Amsys SM9520A](https://www.amsys-sensor.com/products/ceramic-and-silicon-pressure-measuring-cells/sm95g-low-pressure-sensor-die/) a low differential pressure sensor die.
 
 ## Power PCB
 
@@ -88,24 +88,30 @@ It contains the following cables:
 1. Third valve (right)
 2. Single valve (bottom)
 3. Pump
-4. Bean hopper switch
+4. (TAB9) Bean hopper switch
 5. Neutral
 6. Grinder motor
 7. Grinder motor
 8. Probably phase
 9. (The blue one below) Second valve (center)
 10. First valve (left)
-11. TRIAC output (thermojet feedback)
-12. TRIAC Gate
+11. (TAB20) TRIAC output (thermojet feedback, PCB can see if the TRIAC is working)
+12. (TAB10) TRIAC Gate
 13. Airpump
-14. Watertank reed switch
+14. (CON1) Watertank reed switch
 15. Flowwheel
-16. Thermojet NTC
+16. (NTC1) Thermojet NTC
 17. Coming from PSU. Probably low voltage supply
-18. Steamwand rised/lowered switch
-19. Portafilter switch
+18. (CON4) Steamwand rised/lowered switch
+19. (CON5) Portafilter switch
 20. 26 pin connector to control PCB
 21. 6 pin milkpitcher switch and NTC
+
+### Other parts
+
+There are some optical isolators (marked ISOx). Those are ...  
+
+Then there is IC2 and IC6. Those are ...
 
 ## The heatsink
 
@@ -147,9 +153,11 @@ At this point I figured the following pinout:
 25. ???
 26. ??? (red cable)
 
+Finding out more pins should be pretty easy once I removed the power PCB.
+
 ## The debug port
 
-The 20 pin header which is accessible by removing the top panel and opening the rubber lid.  
+The 20 pin header is accessible by removing the top panel and opening the rubber lid.  
 This port is very interesting and should allow us to dump and reflash the firmware.  
 At this point I figured the following pinout:
 
@@ -181,7 +189,7 @@ At this point I figured the following pinout:
 We do have two options now:
 
 1. Remove the PCB and add a different.
-2. "Crack" the firmware and flash a custom one 
+2. Reverse engineer the firmware and flash a custom one 
 
 ### Replacing the PCB
 
