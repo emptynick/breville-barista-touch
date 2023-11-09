@@ -85,38 +85,52 @@ The power PCB is located at the back of the machine behind the power-supply.
 
 It contains the following cables:
 
-1.  (TAB18) Third valve (right)
-2.  (TAB19) Single valve (bottom)
-3.  (TAB15) Pump
-4.  (TAB9)  Bean hopper switch
-5.  (TAB7)  Neutral
-6.  (TAB21) Grinder motor
-7.  (TAB22) Grinder motor
-8.  (TAB8)  Probably phase
-9.  (TAB16) (The blue one below) Second valve (center)
-10. (TAB17) First valve (left)
-11. (TAB20) TRIAC output (thermojet feedback, PCB can see if the TRIAC is working)
-12. (TAB10) TRIAC Gate
-13. (CON7)  Airpump
-14. (CON3)  Watertank reed switch
-15. (CON6)  Flowwheel
-16. (NTC1)  Thermojet NTC
-17. (CON2)  Coming from PSU. Probably low voltage supply
-18. (CON4)  Steamwand rised/lowered switch
-19. (CON5)  Portafilter switch
-20. (CON9)  26 pin connector to control PCB
-21. (CON8)  6 pin milkpitcher switch and NTC
+| **Number** | **Marking** | **Function**                    |
+|------------|-------------|---------------------------------|
+| 1          | TAB18       | Third valve (right)             |
+| 2          | TAB19       | Single valve (bottom)           |
+| 3          | TAB15       | Pump                            |
+| 4          | TAB9        | Bean hopper switch              |
+| 5          | TAB7        | Neutral                         |
+| 6          | TAB21       | Grinder motor                   |
+| 7          | TAB22       | Grinder motor                   |
+| 8          | TAB8        | Phase                           |
+| 9          | TAB16       | Second valve (center)           |
+| 10         | TAB17       | First valve (left)              |
+| 11         | TAB20       | Thermojet Triac feedback?       |
+| 12         | TAB10       | Thermojet Triac gate            |
+| 13         | CON7        | Airpump                         |
+| 14         | CON3        | Watertank reed switch           |
+| 15         | CON6        | Flowwheel                       |
+| 16         | NTC1        | Thermojet NTC                   |
+| 17         | CON2        | Control voltage from PSU        |
+| 18         | CON4        | Steamwand position switch       |
+| 19         | CON5        | Portafilter switch              |
+| 20         | CON9        | 26 pin connector to control PCB |
+| 21         | CON8        | 6 pin pitcher switch and NTC    |
 
 ### Other parts
 
-There are some optical isolators (marked ISOx). Those are either [Everlight EL3063](https://www.mouser.com/ProductDetail/Everlight/EL3063?qs=EsvJhH3KfjBuOIhnhymotA%3D%3D) or [OnSemi MOC3052-A](https://www.onsemi.com/pdf/datasheet/moc3052m-d.pdf) isolated TRIAC drivers.
+There are some optical isolators (marked ISOx). Those are either [Everlight EL3063](https://www.mouser.com/ProductDetail/Everlight/EL3063?qs=EsvJhH3KfjBuOIhnhymotA%3D%3D) or [OnSemi MOC3052-A](https://www.onsemi.com/pdf/datasheet/moc3052m-d.pdf) isolated Triac drivers.
 
 Then there is IC1, IC2 and IC6. Those are [Everlight EL817](https://www.mouser.com/ProductDetail/Everlight/EL817?qs=vs%252BWWTB4QKYUQzCxB0orLQ%3D%3D) opto couplers.
+
+Here is what each part is responsible for:
+
+| **Triac**      | **Isolator** | **Function**          | **Control pin** |
+|----------------|--------------|-----------------------|-----------------|
+| TA1            | ???          | First valve (left)    | ???             |
+| TA2            | ISO3         | Pump                  | ???             |
+| TA3            | ???          | Second valve (center) | ???             |
+| TA4            | ???          | Third valve (right)   | ???             |
+| TA5            | ???          | Single valve (bottom) | ???             |
+| TA6            | ???          | ???                   | ???             |
+| Under heatsink | ISO4         | Thermojet             | ???             |
 
 ## The heatsink
 
 On the left side there is a heatsink with 3 cables going in (red, purple and yellow).  
-Under the heatsink there is a simple [LittelFuse Q6015L6](https://www.mouser.com/ProductDetail/Littelfuse/Q6015L6?qs=DBUMZ2Yty93GeYTH4lKOzw%3D%3D) 15 Amp TRIAC.  
+Under the heatsink there is a simple [LittelFuse Q6015L6](https://www.mouser.com/ProductDetail/Littelfuse/Q6015L6?qs=DBUMZ2Yty93GeYTH4lKOzw%3D%3D) 15 Amp Triac.  
 This controls the thermojet. Applying power to the yellow cable fires the heater.
 
 ## The 26 pin connector
@@ -126,32 +140,34 @@ At this point I figured the following pinout:
 
 ![26 pin connector pinout](assets/comm_port.jpg)
 
-1. ???
-2. Connected to pin 59 of STM32 (VDD)
-3. ???
-4. ???
-5. ???
-6. ???
-7. ???
-8. ???
-9. ???
-10. ???
-11. ???
-12. ???
-13. ???
-14. GND
-15. ???
-16. ???
-17. ???
-18. ???
-19. ???
-20. ???
-21. ???
-22. ???
-23. ???
-24. ???
-25. ???
-26. ??? (red cable)
+| **Pin** | **Function** |
+|---------|--------------|
+| 1       | ???          |
+| 2       | ???          |
+| 3       | ???          |
+| 4       | ???          |
+| 5       | ???          |
+| 6       | ???          |
+| 7       | ???          |
+| 8       | ???          |
+| 9       | ???          |
+| 10      | ???          |
+| 11      | ???          |
+| 12      | ???          |
+| 13      | ???          |
+| 14      | ???          |
+| 15      | ???          |
+| 16      | ???          |
+| 17      | ???          |
+| 18      | ???          |
+| 19      | ???          |
+| 20      | ???          |
+| 21      | ???          |
+| 22      | ???          |
+| 23      | ???          |
+| 24      | ???          |
+| 25      | ???          |
+| 26      | ???          |
 
 Finding out more pins should be pretty easy once I removed the power PCB.
 
@@ -163,26 +179,28 @@ At this point I figured the following pinout:
 
 ![Debug port pinout](assets/debug_port.jpg)
 
-1. ???
-2. ???
-3. Connected to pin 58 of STM32 (generic IO) Could be SWCLK (150k Ohm)
-4. Connected to pin 36 of STM32 (generic IO)
-5. ???
-6. Connected to pin 3 of STM32 (TRACED1)
-7. Connected to pin 199 of STM32 (generic IO)
-8. ???
-9. ???
-10. Connected to pin 2 of STM32 (TRACED0)
-11. GND
-12. GND
-13. GND
-14. GND
-15. GND
-16. GND
-17. GND
-18. GND
-19. GND
-20. Connected to pin 59 of STM32 (VDD)
+| **Pin** | **Function** |
+|---------|--------------|
+| 1       | ???          |
+| 2       | ???          |
+| 3       | ???          |
+| 4       | ???          |
+| 5       | ???          |
+| 6       | ???          |
+| 7       | ???          |
+| 8       | ???          |
+| 9       | ???          |
+| 10      | ???          |
+| 11      | GND          |
+| 12      | GND          |
+| 13      | GND          |
+| 14      | GND          |
+| 15      | GND          |
+| 16      | GND          |
+| 17      | GND          |
+| 18      | GND          |
+| 19      | GND          |
+| 20      | VDD          |
 
 ## Now what?
 
