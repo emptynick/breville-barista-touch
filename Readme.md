@@ -109,14 +109,14 @@ It contains the following cables:
 
 ### Other parts
 
-There are some optical isolators (marked ISOx). Those are ...  
+There are some optical isolators (marked ISOx). Those are either [Everlight EL3063](https://www.mouser.com/ProductDetail/Everlight/EL3063?qs=EsvJhH3KfjBuOIhnhymotA%3D%3D) or [OnSemi MOC3052-A](https://www.onsemi.com/pdf/datasheet/moc3052m-d.pdf) isolated TRIAC drivers.
 
-Then there is IC2 and IC6. Those are ...
+Then there is IC1, IC2 and IC6. Those are [Everlight EL817](https://www.mouser.com/ProductDetail/Everlight/EL817?qs=vs%252BWWTB4QKYUQzCxB0orLQ%3D%3D) opto couplers.
 
 ## The heatsink
 
 On the left side there is a heatsink with 3 cables going in (red, purple and yellow).  
-Under the heatsink there is a simple [Q6015L6](https://www.mouser.com/ProductDetail/Littelfuse/Q6015L6?qs=DBUMZ2Yty93GeYTH4lKOzw%3D%3D) 15 Amp TRIAC.  
+Under the heatsink there is a simple [LittelFuse Q6015L6](https://www.mouser.com/ProductDetail/Littelfuse/Q6015L6?qs=DBUMZ2Yty93GeYTH4lKOzw%3D%3D) 15 Amp TRIAC.  
 This controls the thermojet. Applying power to the yellow cable fires the heater.
 
 ## The 26 pin connector
