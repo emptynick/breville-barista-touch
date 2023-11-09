@@ -85,27 +85,27 @@ The power PCB is located at the back of the machine behind the power-supply.
 
 It contains the following cables:
 
-1. Third valve (right)
-2. Single valve (bottom)
-3. Pump
-4. (TAB9) Bean hopper switch
-5. Neutral
-6. Grinder motor
-7. Grinder motor
-8. Probably phase
-9. (The blue one below) Second valve (center)
-10. First valve (left)
+1.  (TAB18) Third valve (right)
+2.  (TAB19) Single valve (bottom)
+3.  (TAB15) Pump
+4.  (TAB9)  Bean hopper switch
+5.  (TAB7)  Neutral
+6.  (TAB21) Grinder motor
+7.  (TAB22) Grinder motor
+8.  (TAB8)  Probably phase
+9.  (TAB16) (The blue one below) Second valve (center)
+10. (TAB17) First valve (left)
 11. (TAB20) TRIAC output (thermojet feedback, PCB can see if the TRIAC is working)
 12. (TAB10) TRIAC Gate
-13. Airpump
-14. (CON1) Watertank reed switch
-15. Flowwheel
-16. (NTC1) Thermojet NTC
-17. Coming from PSU. Probably low voltage supply
-18. (CON4) Steamwand rised/lowered switch
-19. (CON5) Portafilter switch
-20. 26 pin connector to control PCB
-21. 6 pin milkpitcher switch and NTC
+13. (CON7)  Airpump
+14. (CON3)  Watertank reed switch
+15. (CON6)  Flowwheel
+16. (NTC1)  Thermojet NTC
+17. (CON2)  Coming from PSU. Probably low voltage supply
+18. (CON4)  Steamwand rised/lowered switch
+19. (CON5)  Portafilter switch
+20. (CON9)  26 pin connector to control PCB
+21. (CON8)  6 pin milkpitcher switch and NTC
 
 ### Other parts
 
@@ -165,7 +165,7 @@ At this point I figured the following pinout:
 
 1. ???
 2. ???
-3. Connected to pin 58 of STM32 (generic IO)
+3. Connected to pin 58 of STM32 (generic IO) Could be SWCLK (150k Ohm)
 4. Connected to pin 36 of STM32 (generic IO)
 5. ???
 6. Connected to pin 3 of STM32 (TRACED1)
