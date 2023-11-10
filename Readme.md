@@ -80,11 +80,14 @@ The same applies to the other port number 8
 ### Pressure sensor
 
 There is a sensor on the PCB which was connected to a hose leading to the venturi valve.  
-It is labeled `F9520` and googling this leads me to the [Amsys SM9520A](https://www.amsys-sensor.com/products/ceramic-and-silicon-pressure-measuring-cells/sm95g-low-pressure-sensor-die/) a low differential pressure sensor die.
+It is labeled `F9520` and googling this leads me to the [Amsys SM9520A](https://www.amsys-sensor.com/products/ceramic-and-silicon-pressure-measuring-cells/sm95g-low-pressure-sensor-die/) a low differential pressure sensor die.  
+
+This could be wrong tho
 
 ## Power PCB
 
-The power PCB is located at the back of the machine behind the power-supply.
+The power PCB is located at the back of the machine behind the power-supply.  
+Sorry it's upside down.
 
 ![Power PCB](assets/power_pcb.jpg)
 
@@ -113,6 +116,8 @@ It contains the following cables:
 | 19         | CON5        | Portafilter switch              |
 | 20         | CON9        | 26 pin connector to control PCB |
 | 21         | CON8        | 6 pin pitcher switch and NTC    |
+| None       | TAB23       | Tamping motor on Oracles?       |
+| None       | DB2         | Second boiler BDB and Oracles?  |
 
 ### Other parts
 
@@ -181,49 +186,40 @@ The 20 pin header is accessible by removing the top panel and opening the rubber
 This port is very interesting and should allow us to dump and reflash the firmware.  
 At this point I figured the following pinout:
 
-![Debug port pinout](assets/debug_port.jpg)
-
 | **Pin** | **Function** |
 |---------|--------------|
 | 1       | ???          |
-| 2       | ???          |
+| 2       | VDD 3.3V     |
 | 3       | ???          |
-| 4       | ???          |
+| 4       | GND          |
 | 5       | ???          |
-| 6       | ???          |
+| 6       | GND          |
 | 7       | ???          |
-| 8       | ???          |
+| 8       | GND          |
 | 9       | ???          |
-| 10      | ???          |
-| 11      | GND          |
+| 10      | GND          |
+| 11      | ???          |
 | 12      | GND          |
-| 13      | GND          |
+| 13      | ???          |
 | 14      | GND          |
-| 15      | GND          |
+| 15      | ???          |
 | 16      | GND          |
-| 17      | GND          |
+| 17      | ???          |
 | 18      | GND          |
-| 19      | GND          |
-| 20      | VDD          |
+| 19      | ???          |
+| 20      | GND          |
 
 ## The power supply
 
 
+But the MCU needs 3.3V and the airpump 12V.
 
 ## Now what?
 
 We do have two options now:
 
-1. Remove the PCB and add a different.
-2. Reverse engineer the firmware and flash a custom one 
-
-### Replacing the PCB
-
-At first I thought this is the way to go.  
-Unfortunately the display is not compatible with Raspberry Pis or other SBCs.  
-Adafruit does have a [board](https://www.adafruit.com/product/1590) which should be compatible but it costs 40$ and I'm not sure if it is worth it.  
-At that cost you could simply swap the whole display/pcb unit with an [ESP32 with display](https://aliexpress.com/item/1005006213165842.html)
-
+1. Reverse engineer the firmware and flash a custom one 
+2. Remove the PCB and add a different.
 
 ### Customizing the firmware
 
@@ -233,3 +229,13 @@ You ever thought you could say that about your coffee machine?
 
 This requires all pins connected to the STM32 to be traced down and documented to be able to write a whole new firmware for the STM32.  
 This might take some time as the PCB is a multi layer PCB.
+
+Anyway, I'm not that skilled with STM chips and its cube IDE.
+
+### Replacing the PCB
+
+I think this is the way to go.  
+Unfortunately the display is not compatible with Raspberry Pis or other SBCs.  
+Adafruit does have a [board](https://www.adafruit.com/product/1590) which should be compatible but it costs 40$ and I'm not sure if it is worth it.  
+I decided to go with a 4.3 inch QLED DSI display from [Waveshare](https://www.waveshare.com/4.3inch-dsi-qled.htm) because its costs pretty much the same as the adapter and you can just plug a raspberry to the back of it.  
+Also it will be pretty awesome.
