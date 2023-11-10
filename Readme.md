@@ -108,14 +108,14 @@ It contains the following cables:
 | 11         | TAB20       | Thermojet Triac feedback?       |
 | 12         | TAB10       | Thermojet Triac gate            |
 | 13         | CON7        | Airpump                         |
-| 14         | CON3        | Watertank reed switch           |
-| 15         | CON6        | Flow meter                      |
-| 16         | NTC1        | Thermojet NTC                   |
-| 17         | CON2        | Control voltage from PSU        |
-| 18         | CON4        | Steamwand position switch       |
-| 19         | CON5        | Portafilter switch              |
+| 14         | CON3        | Watertank reed switch (left pin GND)           |
+| 15         | CON6        | Flow meter (center pin GND)                      |
+| 16         | NTC1        | Thermojet NTC (Left pin 3.3V)                   |
+| 17         | CON2        | Control voltage from PSU (second pin 3.3V, third pin from left GND)        |
+| 18         | CON4        | Steamwand position switch (left pin GND)       |
+| 19         | CON5        | Portafilter switch (left pin GND)              |
 | 20         | CON9        | 26 pin connector to control PCB |
-| 21         | CON8        | 6 pin pitcher switch and NTC    |
+| 21         | CON8        | 6 pin pitcher switch and NTC (second pin 3.3V, right pin GND)    |
 | None       | TAB23       | Tamping motor on Oracles?       |
 | None       | DB2         | Second boiler BDB and Oracles?  |
 
@@ -129,13 +129,13 @@ Here is what each part is responsible for:
 
 | **Triac**      | **Isolator** | **Function**          | **Control pin** |
 |----------------|--------------|-----------------------|-----------------|
-| TA1            | ISO1         | First valve (left)    | ???             |
-| TA2            | ISO3         | Pump                  | ???             |
-| TA3            | ISO5         | Second valve (center) | ???             |
-| TA4            | ISO6         | Third valve (right)   | ???             |
-| TA5            | ISO7         | Single valve (bottom) | ???             |
-| TA6            | ISO8         | Grinder               | ???             |
-| Under heatsink | ISO4         | Thermojet             | ???             |
+| TA1            | ISO1         | First valve (left)    | 11              |
+| TA2            | ISO3         | Pump                  | 6               |
+| TA3            | ISO5         | Second valve (center) | 12              |
+| TA4            | ISO6         | Third valve (right)   | 10              |
+| TA5            | ISO7         | Single valve (bottom) | 9               |
+| TA6            | ISO8         | Grinder               | 5               |
+| Under heatsink | ISO4         | Thermojet             | 8               |
 
 ## The heatsink
 
@@ -152,31 +152,31 @@ At this point I figured the following pinout:
 | **Pin** | **Function**                             |
 |---------|------------------------------------------|
 | 1       | Connected to NTC3 which is not populated |
-| 2       | ???          |
-| 3       | ???          |
-| 4       | ???          |
-| 5       | ???          |
-| 6       | ???          |
-| 7       | ???          |
-| 8       | ???          |
-| 9       | ???          |
-| 10      | ???          |
-| 11      | ???          |
-| 12      | ???          |
-| 13      | ???          |
-| 14      | ???          |
-| 15      | ???          |
-| 16      | Portafilter switch          |
-| 17      | Watertank reed switch          |
-| 18      | Steamwand position switch          |
-| 19      | ???          |
-| 20      | NTC thermojet          |
-| 21      | Red cable from PSU          |
-| 22      | ???          |
-| 23      | ???          |
-| 24      | First black cable from PSU (next to red)          |
-| 25      | Common (ground? vdd?)          |
-| 26      | Airpump          |
+| 2       | Fifth pin in pitcher seitch/NTC          |
+| 3       | Fourth pin on pitcher switch/NTC         |
+| 4       | Third pin on pitcher switch/NTC          |
+| 5       | ISO8 (Grinder)                           |
+| 6       | ISO3 (Pump)                              |
+| 7       | Airpump PWM input?                       |
+| 8       | ISO4 (Thermojet)                         |
+| 9       | ISO7 (Single valve bottom)               |
+| 10      | ISO6 (Third valve right)                 |
+| 11      | ISO1 (First valve left)                  |
+| 12      | ISO5 (Second valve center)               |
+| 13      | IC1 (Output) Grinder feedback            |
+| 14      | IC2 (Output) Bean hopper feedback        |
+| 15      | Flow meter green cable                   |
+| 16      | Portafilter switch                       |
+| 17      | Watertank reed switch                    |
+| 18      | Steamwand position switch                |
+| 19      | First pin on pitcher switch/NTC          |
+| 20      | NTC thermojet                            |
+| 21      | First pin of PSU plug                    |
+| 22      | IC6 (output) Power feedback?             |
+| 23      | Probably flow meter                      |
+| 24      | VDD 3.3V                                 |
+| 25      | GND                                      |
+| 26      | VDD Unknown (Optocouplers anode)         |
 
 Finding out more pins should be pretty easy once I removed the power PCB.
 
