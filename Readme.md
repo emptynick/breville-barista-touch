@@ -106,7 +106,7 @@ It contains the following cables:
 | 12         | TAB10       | Thermojet Triac gate            |
 | 13         | CON7        | Airpump                         |
 | 14         | CON3        | Watertank reed switch           |
-| 15         | CON6        | Flowwheel                       |
+| 15         | CON6        | Flow meter                      |
 | 16         | NTC1        | Thermojet NTC                   |
 | 17         | CON2        | Control voltage from PSU        |
 | 18         | CON4        | Steamwand position switch       |
@@ -124,12 +124,12 @@ Here is what each part is responsible for:
 
 | **Triac**      | **Isolator** | **Function**          | **Control pin** |
 |----------------|--------------|-----------------------|-----------------|
-| TA1            | ???          | First valve (left)    | ???             |
+| TA1            | ISO1         | First valve (left)    | ???             |
 | TA2            | ISO3         | Pump                  | ???             |
-| TA3            | ???          | Second valve (center) | ???             |
-| TA4            | ???          | Third valve (right)   | ???             |
-| TA5            | ???          | Single valve (bottom) | ???             |
-| TA6            | ???          | ???                   | ???             |
+| TA3            | ISO5         | Second valve (center) | ???             |
+| TA4            | ISO6         | Third valve (right)   | ???             |
+| TA5            | ISO7         | Single valve (bottom) | ???             |
+| TA6            | ISO8         | Grinder               | ???             |
 | Under heatsink | ISO4         | Thermojet             | ???             |
 
 ## The heatsink
@@ -143,11 +143,10 @@ This controls the thermojet. Applying power to the yellow cable fires the heater
 The 26 pin connector is the main interface between the control PCB and the power PCB.  
 At this point I figured the following pinout:  
 
-![26 pin connector pinout](assets/comm_port.jpg)
 
-| **Pin** | **Function** |
-|---------|--------------|
-| 1       | ???          |
+| **Pin** | **Function**                             |
+|---------|------------------------------------------|
+| 1       | Connected to NTC3 which is not populated |
 | 2       | ???          |
 | 3       | ???          |
 | 4       | ???          |
@@ -162,17 +161,17 @@ At this point I figured the following pinout:
 | 13      | ???          |
 | 14      | ???          |
 | 15      | ???          |
-| 16      | ???          |
-| 17      | ???          |
-| 18      | ???          |
+| 16      | Portafilter switch          |
+| 17      | Watertank reed switch          |
+| 18      | Steamwand position switch          |
 | 19      | ???          |
-| 20      | ???          |
-| 21      | ???          |
+| 20      | NTC thermojet          |
+| 21      | Red cable from PSU          |
 | 22      | ???          |
 | 23      | ???          |
-| 24      | ???          |
-| 25      | ???          |
-| 26      | ???          |
+| 24      | First black cable from PSU (next to red)          |
+| 25      | Common (ground? vdd?)          |
+| 26      | Airpump          |
 
 Finding out more pins should be pretty easy once I removed the power PCB.
 
@@ -206,6 +205,10 @@ At this point I figured the following pinout:
 | 18      | GND          |
 | 19      | GND          |
 | 20      | VDD          |
+
+## The power supply
+
+
 
 ## Now what?
 
