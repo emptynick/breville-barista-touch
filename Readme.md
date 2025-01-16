@@ -101,7 +101,7 @@ It contains the following cables:
 | 4          | TAB9        | Bean hopper switch              |
 | 5          | TAB7        | Neutral                         |
 | 6          | TAB21       | Grinder motor                   |
-| 7          | TAB22       | Grinder motor                   |
+| 7          | TAB22       | Grinder motor thermostat        |
 | 8          | TAB8        | Phase                           |
 | 9          | TAB16       | Second valve (center)           |
 | 10         | TAB17       | First valve (left)              |
@@ -151,32 +151,32 @@ At this point I figured the following pinout:
 
 | **Pin** | **Function**                             |
 |---------|------------------------------------------|
-| 1       | Connected to NTC3 which is not populated |
-| 2       | Fifth pin in pitcher seitch/NTC          |
+| 1       | NTC3 / not used (group head)             |
+| 2       | Fifth pin in pitcher switch/NTC          |
 | 3       | Fourth pin on pitcher switch/NTC         |
 | 4       | Third pin on pitcher switch/NTC          |
 | 5       | ISO8 (Grinder)                           |
 | 6       | ISO3 (Pump)                              |
-| 7       | Airpump PWM input?                       |
-| 8       | ISO4 (Thermojet)                         |
+| 7       | Airpump                                  |
+| 8       | Heater                                   |
 | 9       | ISO7 (Single valve bottom)               |
 | 10      | ISO6 (Third valve right)                 |
 | 11      | ISO1 (First valve left)                  |
 | 12      | ISO5 (Second valve center)               |
-| 13      | IC1 (Output) Grinder feedback            |
-| 14      | IC2 (Output) Bean hopper feedback        |
-| 15      | Flow meter green cable                   |
+| 13      | Grinder temp                             |
+| 14      | Interlock/Bean hopper                    |
+| 15      | Flow meter                               |
 | 16      | Portafilter switch                       |
 | 17      | Watertank reed switch                    |
 | 18      | Steamwand position switch                |
-| 19      | First pin on pitcher switch/NTC          |
-| 20      | NTC thermojet                            |
-| 21      | First pin of PSU plug                    |
-| 22      | IC6 (output) Power feedback?             |
+| 19      | NTC2 pitcher                             |
+| 20      | NTC1 thermojet                           |
+| 21      | EFast                                    |
+| 22      | 50/60Hz detection                        |
 | 23      | Probably flow meter                      |
-| 24      | VDD 3.3V                                 |
+| 24      | +3.3V                                    |
 | 25      | GND                                      |
-| 26      | VDD Unknown (Optocouplers anode)         |
+| 26      | +12V                                     |
 
 Finding out more pins should be pretty easy once I removed the power PCB.
 
