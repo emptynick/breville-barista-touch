@@ -184,29 +184,29 @@ Finding out more pins should be pretty easy once I removed the power PCB.
 
 The 20 pin header is accessible by removing the top panel and opening the rubber lid.  
 This port is very interesting and should allow us to dump and reflash the firmware.  
-At this point I figured the following pinout:
+It seems like its an STM SWD debug interface. I'll try to hock it up to my debugger
 
 | **Pin** | **Function** |
 |---------|--------------|
-| 1       | ???          |
-| 2       | VDD 3.3V     |
-| 3       | ???          |
+| 1       | 3.3V          |
+| 2       | Analog 3.3V     |
+| 3       | NC          |
 | 4       | GND          |
-| 5       | ???          |
+| 5       | NC          |
 | 6       | GND          |
-| 7       | ???          |
+| 7       | SWDIO          |
 | 8       | GND          |
-| 9       | ???          |
+| 9       | SWCLK          |
 | 10      | GND          |
-| 11      | ???          |
+| 11      | NC          |
 | 12      | GND          |
-| 13      | ???          |
+| 13      | SWO          |
 | 14      | GND          |
-| 15      | ???          |
+| 15      | RESET          |
 | 16      | GND          |
-| 17      | ???          |
+| 17      | NC          |
 | 18      | GND          |
-| 19      | ???          |
+| 19      | NC          |
 | 20      | GND          |
 
 ## The power supply
